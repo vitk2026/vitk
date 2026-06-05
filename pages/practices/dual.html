@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kk">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
 </head>
+
 <body>
 
   <div id="site-header"></div>
@@ -17,17 +19,23 @@
     <section class="page-hero">
       <div class="container">
         <h1 data-i18n="nav_dual"></h1>
-        <p  data-i18n="college_name_top"></p>
+        <p data-i18n="college_name_top"></p>
       </div>
     </section>
 
     <section class="page-content">
       <div class="container">
+        <!-- Content start -->
 
         <!-- Markdown-контент -->
-        <div class="prose" data-md-src="content/docs/{lang}.md">
+        <!-- <div class="prose" style="margin-inline: auto;" data-md-src="content/dual/{lang}.md">
           <p>Загрузка...</p>
-        </div>
+        </div> -->
+
+        <!-- HTML с fallback на MD -->
+        <div class="prose" data-html-src="content/dual/{lang}.html" data-md-src="content/dual/{lang}.md"></div>
+
+        <!-- Content end -->
 
       </div>
     </section>
@@ -75,4 +83,5 @@
   </script>
   <script src="../../assets/js/main.js"></script>
 </body>
+
 </html>

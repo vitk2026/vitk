@@ -188,3 +188,34 @@ document.addEventListener('DOMContentLoaded', async () => {
   const lang = localStorage.getItem('vitk_lang') || 'kk';
   await loadMarkdownContent(lang);
 });
+
+// функция с поддержкой HTML-контента и fallback на Markdown, если HTML не найден или не загрузился
+async function loadMarkdownContent(lang) {
+  const root = getRootPath();
+  for (const container of document.querySelectorAll('[data-md-src]')) {
+    const baseSrc = container.getAttribute('data-md-src');
+
+    // Пробуем загрузить HTML версию если указан data-html-src
+    const htmlBase = container.getAttribute('data-html-src');
+    if (htmlBase) {
+      const htmlUrl = root + htmlBase.replace('{lang}', lang);
+      try {
+        const resp = await fetch(htmlUrl);
+        if (resp.ok) {
+          container.innerHTML = await resp.text();
+          continue; // HTML загружен — переходим к следующему контейнеру
+        }
+      } catch {}
+      // HTML не найден — падаем на MD ниже
+    }
+
+    // Загружаем MD как обычно
+    const mdUrl = root + baseSrc.replace('{lang}', lang);
+    try {
+      const resp = await fetch(mdUrl);
+      if (!resp.ok) { container.innerHTML = ''; continue; }
+      const text = await resp.text();
+      container.innerHTML = window.marked ? marked.parse(text) : text.replace(/\n/g, '<br>');
+    } catch { container.innerHTML = ''; }
+  }
+}
