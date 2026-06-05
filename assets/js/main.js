@@ -216,6 +216,10 @@ async function loadMarkdownContent(lang) {
       if (!resp.ok) { container.innerHTML = ''; continue; }
       const text = await resp.text();
       container.innerHTML = window.marked ? marked.parse(text) : text.replace(/\n/g, '<br>');
+      container.querySelectorAll('a').forEach(a => {
+  a.setAttribute('target', '_blank');
+  a.setAttribute('rel', 'noopener');
+});
     } catch { container.innerHTML = ''; }
   }
 }

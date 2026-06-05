@@ -738,6 +738,15 @@ button {
   background: var(--clr-bg2);
 }
 
+.prose a {
+  color: #2e7fd4;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #1a3a6b;
+}
+
 /* Специальности */
 .specs-table {
   width: 100%;
