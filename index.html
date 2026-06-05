@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="НОУ ВИТК">
+  <title>НОУ ВИТК</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- Шапка (инклюд) -->
+  <div id="site-header"></div>
+  <!-- Навигация (инклюд) -->
+  <div id="site-nav"></div>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         КАРУСЕЛЬ
+    ══════════════════════════════ -->
+    <section class="carousel" aria-label="Фотогалерея">
+      <div class="carousel-track">
+
+        <div class="carousel-slide">
+          <img src="assets/images/slide1.jpg" alt="Колледж"
+               onerror="this.style.opacity='0'">
+          <div class="carousel-caption">
+            <h2 data-i18n="slide1_title"></h2>
+            <p  data-i18n="slide1_desc"></p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/images/slide2.jpg" alt="Обучение"
+               onerror="this.style.opacity='0'">
+          <div class="carousel-caption">
+            <h2 data-i18n="slide2_title"></h2>
+            <p  data-i18n="slide2_desc"></p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="assets/images/slide3.jpg" alt="Технологии"
+               onerror="this.style.opacity='0'">
+          <div class="carousel-caption">
+            <h2 data-i18n="slide3_title"></h2>
+            <p  data-i18n="slide3_desc"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-btn carousel-btn-prev" aria-label="Предыдущий слайд">&#8249;</button>
+      <button class="carousel-btn carousel-btn-next" aria-label="Следующий слайд">&#8250;</button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Слайды">
+        <button class="carousel-dot active" role="tab" aria-label="Слайд 1"></button>
+        <button class="carousel-dot"        role="tab" aria-label="Слайд 2"></button>
+        <button class="carousel-dot"        role="tab" aria-label="Слайд 3"></button>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         ИНФОРМАЦИОННЫЕ БЛОКИ
+    ══════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="home-blocks">
+
+          <!-- Блок «О нас» -->
+          <div class="info-card">
+            <div class="info-card-icon">🎓</div>
+            <h3 data-i18n="about_block_title"></h3>
+            <p  data-i18n="about_block_text"></p>
+            <a href="pages/about/index.html" class="btn btn-primary" data-i18n="learn_more"></a>
+          </div>
+
+          <!-- Блок «Приёмная комиссия» -->
+          <div class="info-card">
+            <div class="info-card-icon">📋</div>
+            <h3 data-i18n="admissions_block_title"></h3>
+            <p  data-i18n="admissions_block_text"></p>
+            <a href="pages\comissia\priem_komissia.html" class="btn btn-primary" data-i18n="learn_more"></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         МЫ НА КАРТЕ
+    ══════════════════════════════ -->
+    <section class="section map-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="map_block_title"></h2>
+
+        <div class="map-container">
+          <!-- Карта 2ГИС -->
+          <div class="map-embed">
+             <a class="dg-widget-link" href="http://2gis.kz/uralsk/firm/70000001025205196/center/51.36406660079957,51.21482778852307/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Уральска</a><div class="dg-widget-link"><a href="http://2gis.kz/uralsk/firm/70000001025205196/photos/70000001025205196/center/51.36406660079957,51.21482778852307/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/uralsk/center/51.363805,51.214677/zoom/16/routeTab/rsType/bus/to/51.363805,51.214677╎Высший инженерно-технологический колледж?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Высший инженерно-технологический колледж</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":51.21482778852307,"lon":51.36406660079957,"zoom":16},"opt":{"city":"uralsk"},"org":[{"id":"70000001025205196"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+          </div>
+
+          <!-- Адрес и телефоны -->
+          <div class="map-info">
+            <div class="map-info-item">
+              <span class="ico">📍</span>
+              <div>
+                <strong data-i18n="map_address_label"></strong>
+                <span>Проспект Нурсултана Назарбаева, 215</span>
+              </div>
+            </div>
+            <div class="map-info-item">
+              <span class="ico">📞</span>
+              <div>
+                <strong data-i18n="map_phone_label"></strong>
+                <span>
+                  <a href="tel:+77112513531">+7 (7112) 51‒35‒31</a><br>
+                </span>
+              </div>
+            </div>
+            <div class="map-info-item">
+              <span class="ico">✉️</span>
+              <div>
+                <strong data-i18n="map_email_label"></strong>
+                <span><a href="mailto:wketc@mail.ru">wketc@mail.ru</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Футер (инклюд) -->
+  <div id="site-footer"></div>
+
+  <!-- marked.js для рендеринга Markdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

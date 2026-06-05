@@ -1,0 +1,79 @@
+<!-- _includes/nav.html -->
+<nav class="navbar" role="navigation" aria-label="Главное меню">
+  <div class="navbar-inner">
+    <ul class="nav-list" id="main-nav-list">
+
+      <li class="nav-item">
+        <a href="index.html" class="nav-link" data-i18n="nav_home"></a>
+      </li>
+
+      <!-- Раздел с подразделами О нас -->
+      <li class="nav-item has-dropdown">
+        <a href="pages/about/index.html" class="nav-link" data-i18n="nav_about">
+          <span class="nav-arrow"></span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="pages/about/index.html" class="dropdown-link" data-i18n="nav_about_general"></a></li>
+          <li><a href="pages/about/structure.html" class="dropdown-link" data-i18n="nav_about_structure"></a></li>
+        </ul>
+      </li>
+      
+      <li class="nav-item">
+        <a href="pages/administrations/index.html" class="nav-link" data-i18n="nav_administrations"></a>
+      </li>
+
+      <!-- Раздел с подразделами Абитуриенту -->
+      <li class="nav-item has-dropdown">
+        <a href="#" class="nav-link" data-i18n="nav_abiturient">
+          <span class="nav-arrow"></span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="pages/abiturient/specs.html" class="dropdown-link" data-i18n="nav_specs"></a></li>
+          <li><a href="pages/abiturient/docs.html" class="dropdown-link" data-i18n="nav_docs"></a></li>
+          <li><a href="pages/abiturient/time.html" class="dropdown-link" data-i18n="nav_time"></a></li>
+          <li><a href="pages/abiturient/kvota.html" class="dropdown-link" data-i18n="nav_kvota"></a></li>
+          <li><a href="pages/abiturient/plan.html" class="dropdown-link" data-i18n="nav_plan"></a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="pages/achievements/index.html" class="nav-link" data-i18n="nav_achievements"></a>
+      </li>
+
+      <!-- Раздел с подразделами Практика -->
+      <li class="nav-item has-dropdown">
+        <a href="#" class="nav-link" data-i18n="nav_practices">
+          <span class="nav-arrow"></span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="pages/practices/partners.html" class="dropdown-link" data-i18n="nav_partners"></a></li>
+          <li><a href="pages/practices/base.html" class="dropdown-link" data-i18n="nav_prac_base"></a></li>
+          <li><a href="pages/practices/dual.html" class="dropdown-link" data-i18n="nav_dual"></a></li>
+          <li><a href="pages/practices/mat_base.html" class="dropdown-link" data-i18n="nav_mat_base"></a></li>
+        </ul>
+      </li>
+
+      <!-- Новости — раздел с записями -->
+      <li class="nav-item">
+        <a href="pages/news/index.html" class="nav-link" data-i18n="nav_news"></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="pages/contacts/index.html" class="nav-link" data-i18n="nav_contacts"></a>
+      </li>
+    </ul>
+
+    <!-- Переключатель языка (десктоп) -->
+    <div class="nav-lang" role="group" aria-label="Язык / Тіл">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="kk" aria-label="Қазақша">ҚАЗ</button>
+        <button class="lang-btn" data-lang="ru" aria-label="Русский">РУС</button>
+      </div>
+    </div>
+
+    <!-- Кнопка бургера (мобильная) -->
+    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="main-nav-list">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

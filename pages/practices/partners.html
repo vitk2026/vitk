@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Соц. партнёры — НОУ ВИТК">
+  <title>Соц. партнёры — ВИТК</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
+</head>
+<body>
+
+  <div id="site-header"></div>
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-i18n="nav_partners"></h1>
+        <p  data-i18n="college_name_top"></p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+
+        <!-- Markdown-контент -->
+        <div class="prose" data-md-src="content/docs/{lang}.md">
+          <p>Загрузка...</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="../../assets/js/i18n.js"></script>
+  <script>
+    function getRootPath() { return '../../'; }
+
+    async function loadSpecs() {
+      const tbody = document.getElementById('specs-tbody');
+      const title = document.getElementById('specs-title');
+      if (!tbody) return;
+      try {
+        const resp = await fetch('../../content/admissions/specs.json');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const lang = localStorage.getItem('vitk_lang') || 'kk';
+
+        if (title) title.textContent = lang === 'kk' ? 'Мамандықтар тізімі' : 'Список специальностей';
+
+        tbody.innerHTML = data.map(s => `
+          <tr>
+            <td>${s.code}</td>
+            <td>${s.name[lang] || s.name.ru}</td>
+            <td>${s.duration[lang] || s.duration.ru}</td>
+            <td>${s.form[lang] || s.form.ru}</td>
+            <td>${s.cost}</td>
+          </tr>
+        `).join('');
+      } catch { }
+    }
+
+    // Перегрузить таблицу при смене языка
+    const origSetLang = window.setLang;
+    document.addEventListener('DOMContentLoaded', () => {
+      loadSpecs();
+      // Патчим setLang после загрузки
+      const btn = document.querySelectorAll('.lang-btn');
+      btn.forEach(b => b.addEventListener('click', () => setTimeout(loadSpecs, 50)));
+    });
+  </script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

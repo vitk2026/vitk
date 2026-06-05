@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Новости — НОУ ВИТК">
+  <title>Жаңалықтар / Новости — ВИТК</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
+</head>
+<body>
+
+  <div id="site-header"></div>
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-i18n="news_hero_title"></h1>
+        <p  data-i18n="news_hero_sub"></p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+
+        <!-- Фильтр по тегам -->
+        <div class="posts-header">
+          <div class="posts-filter" id="news-filter">
+            <button class="filter-btn active" data-tag="all" data-i18n="news_all"></button>
+            <!-- Теги добавятся динамически -->
+          </div>
+        </div>
+
+        <!-- Сетка постов -->
+        <div class="posts-grid" id="news-grid">
+          <div class="posts-empty">
+            <div class="empty-icon">📰</div>
+            <p data-i18n="news_empty"></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="../../assets/js/i18n.js"></script>
+  <script>
+    function getRootPath() { return '../../'; }
+  </script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/news.js"></script>
+</body>
+</html>
