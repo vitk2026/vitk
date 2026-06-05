@@ -4,7 +4,7 @@
 
 if (typeof getRootPath === 'undefined') {
   window.getRootPath = function () {
-    const base = '/college-site/';
+    const base = '/vitk/';
     return base;
   };
 }
@@ -35,9 +35,9 @@ async function loadInclude(selector, url) {
 async function loadIncludes() {
   const root = getRootPath();
   await Promise.all([
-    loadInclude('#site-header', root + '_includes/header.html'),
-    loadInclude('#site-nav',    root + '_includes/nav.html'),
-    loadInclude('#site-footer', root + '_includes/footer.html'),
+    loadInclude('#site-header', root + 'includes/header.html'),
+    loadInclude('#site-nav',    root + 'includes/nav.html'),
+    loadInclude('#site-footer', root + 'includes/footer.html'),
   ]);
 
   if (window.applyTranslations) applyTranslations();
