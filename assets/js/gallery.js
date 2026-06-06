@@ -1,5 +1,5 @@
 (function () {
-  const ROOT = typeof getRootPath === 'function' ? getRootPath() : '../../';
+  const ROOT = typeof getRootPath === 'function' ? getRootPath() : '';
 
   let photos = [];
   let current = 0;
