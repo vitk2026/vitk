@@ -25,9 +25,12 @@
       <div class="container">
 
         <!-- Markdown-контент -->
-        <div class="prose" data-md-src="content/docs/{lang}.md">
+        <!-- <div class="prose" data-md-src="content/docs/{lang}.md">
           <p>Загрузка...</p>
-        </div>
+        </div> -->
+
+        <!-- HTML с fallback на MD -->
+        <div class="prose" data-html-src="content/practies_base/{lang}.html" data-md-src="content/practies_base/{lang}.md"></div>
 
       </div>
     </section>
