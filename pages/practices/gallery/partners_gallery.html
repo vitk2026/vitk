@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты — НОУ ВИТК">
+  <title>Галерея — ВИТК</title>
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../../../assets/images/logo.svg">
+</head>
+<!-- Лайтбокс -->
+<div id="gallery-lightbox" class="lightbox" style="display:none">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)">❮</button>
+  <img id="lightbox-img" src="" alt="">
+  <span id="lightbox-caption"></span>
+  <button class="lightbox-next" onclick="lightboxNav(1)">❯</button>
+</div>
+
+<body>
+
+  <div id="site-header"></div>
+  <div id="site-nav"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Галерея</h1>
+        <p data-i18n="nav_partners"></p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <a href="../partners.html" class="post-back" data-i18n="news_back"></a>
+        <div id="gallery-grid" data-src="../../content/gallery/partners.json"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="../../../assets/js/i18n.js"></script>
+  <script>
+    function getRootPath() { return '../../../'; }
+  </script>
+  <script src="../../../assets/js/gallery.js"></script>
+  <script src="../../../assets/js/main.js"></script>
+</body>
+
+</html>

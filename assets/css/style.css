@@ -748,6 +748,144 @@ button {
   color: #1a3a6b;
 }
 
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Лайтбокс */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, .92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, .15);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background .2s;
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, .3);
+}
+
+/* Кнопка для перехода в галерею */
+/* ── Универсальные кнопки ВИТК ── */
+.btn-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.vitk-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .65rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.vitk-btn-primary {
+  background: #1a3a6b;
+  color: #ffffff;
+}
+
+.vitk-btn-primary:hover {
+  background: #2e7fd4;
+  transform: translateY(-1px);
+}
+
+.vitk-btn-secondary {
+  background: #2e7fd4;
+  color: #ffffff;
+}
+
+.vitk-btn-secondary:hover {
+  background: #1a3a6b;
+  transform: translateY(-1px);
+}
+
+.vitk-btn-outline {
+  background: transparent;
+  color: #1a3a6b;
+  border: 2px solid #1a3a6b;
+}
+
+.vitk-btn-outline:hover {
+  background: #1a3a6b;
+  color: #ffffff;
+}
+
 /* Специальности */
 .specs-table {
   width: 100%;

@@ -96,6 +96,9 @@ const TRANSLATIONS = {
     footer_nav_title:      "Бөлімдер",
     footer_contacts_title: "Байланыс",
     footer_copy:           "© Жоғары инженерлік-технологиялық колледжі",
+
+    /* gallery */
+    show_photo: "Фотосуреттерді қарау", 
   },
 
   ru: {
@@ -190,6 +193,9 @@ const TRANSLATIONS = {
     footer_nav_title:      "Разделы",
     footer_contacts_title: "Контакты",
     footer_copy:           "© Высший инженерно-технологический колледж",
+
+    /* gallery */
+    show_photo: "Посмотреть фотографии", 
   }
 };
 
