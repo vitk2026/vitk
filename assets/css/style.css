@@ -741,6 +741,7 @@ button {
 .prose a {
   color: #2e7fd4;
   text-decoration: underline;
+  font-size: small;
 }
 
 .prose a:hover {
