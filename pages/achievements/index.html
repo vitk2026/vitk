@@ -16,19 +16,15 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <h1 data-i18n="nav_achievements"></h1>
-        <p  data-i18n="college_name_top"></p>
+        <h1>Галерея</h1>
+        <p data-i18n="nav_achievements"></p>
       </div>
     </section>
 
     <section class="page-content">
       <div class="container">
-
-        <!-- Markdown-контент -->
-        <div class="prose" data-md-src="content/achievements/{lang}.md">
-          <p>Загрузка...</p>
-        </div>
-
+        <!-- Ссылка жёстко задана. Когда домен поменяется, нужно будет сменить и её -->
+        <div id="gallery-grid" data-src="https://vitk2026.github.io/vitk/content/gallery/partners.json"></div>
       </div>
     </section>
   </main>
@@ -74,5 +70,6 @@
     });
   </script>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/gallery.js"></script>
 </body>
 </html>
