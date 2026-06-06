@@ -1,10 +1,5 @@
 (function () {
-  const ROOT = (() => {
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    return typeof getRootPath === 'function' ? getRootPath() : '../../';
-  }
-  return 'https://vitk2026.github.io/vitk/';
-  })();
+  const ROOT = typeof getRootPath === 'function' ? getRootPath() : '../../';
 
   let photos = [];
   let current = 0;
@@ -17,7 +12,7 @@
     if (!src) return;
 
     try {
-      const resp = await fetch(ROOT + src);
+      const resp = await fetch(src.startsWith('http') ? src : ROOT + src);
       if (!resp.ok) return;
       photos = await resp.json();
     } catch { return; }
