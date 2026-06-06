@@ -1,5 +1,7 @@
 (function () {
-  const ROOT = typeof getRootPath === 'function' ? getRootPath() : '../../';
+  const ROOT = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? (typeof getRootPath === 'function' ? getRootPath() : '../../')
+  : 'https://vitk2026.github.io/vitk/';
 
   let photos = [];
   let current = 0;
