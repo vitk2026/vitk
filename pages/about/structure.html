@@ -19,9 +19,11 @@
     </section>
     <section class="page-content">
       <div class="container">
-        <div class="prose" data-md-src="content/about/structure.{lang}.md">
+        <!-- <div class="prose" data-md-src="content/about/structure.{lang}.md">
           <p style="color:#999">Загрузка...</p>
-        </div>
+        </div> -->
+                <!-- HTML с fallback на MD -->
+        <div class="prose" data-html-src="content/about/structure.{lang}.html" data-md-src="content/about/structure.{lang}.md"></div>
       </div>
     </section>
   </main>
